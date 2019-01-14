@@ -1,6 +1,6 @@
 # Weather App
 
-![](weatherapp.gif)
+![](weatherappgif.gif)
 
 # Built with NodeJS, Express and the EJS templating language
 
