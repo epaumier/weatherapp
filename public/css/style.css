@@ -1,0 +1,25 @@
+body {
+    background-color: whitesmoke;
+    margin: auto;
+    text-align: center !important;
+}
+
+.cold {
+    background-color: #d0efef;   
+}
+
+.warm {
+    background-color:#efd0d0;
+}
+
+.weatherform {
+border-width: 0;
+ margin-top: 2rem
+}
+
+.ghost-input {
+    border-radius: 15px;
+    text-align: center;
+    border-width: 0;
+    padding: 0.5rem 0.5rem
+}

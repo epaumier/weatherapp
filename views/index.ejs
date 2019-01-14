@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link
+         rel="stylesheet"
+         type="text/css"
+         href="/css/style.css"
+    >
+    <link 
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300'
+        rel='stylesheet'
+        type='text/css'
+    >
+  </head>
+  
+  <% if (temp === null){ %>
+    <body>
+  <% } else if (temp < 10){ %>
+    <body class="cold">
+  <% } else{ %>  
+    <body class="warm">
+ <% } %>
+
+    <div class="d-flex flex-column justify-content-center">
+        <h1 class="display-1">Weather App</h1>
+      <fieldset class="weatherform">
+        <form action="/" method="post">
+            <input 
+                name="city"
+                type="text"
+                class="ghost-input"
+                placeholder="Enter a City"
+                required
+            >
+            <input
+                    type="submit"
+                    class="btn btn-info"
+                    value="Get Weather"
+            >
+        </form>
+        <% if(cityname !== null){ %>
+          <p class="lead"><%= cityname %></p>
+        <% } %>
+
+        <% if(temp !== null){ %>
+          <p class="lead"><%= temp %> Celsius</p>
+        <% } %>
+
+        <% if(desc !== null){ %>
+          <p class="lead"><%= desc %></p>
+        <% } %>
+
+        <% if(sky !== null){ %>
+          <img src="<%= sky %>" >
+        <% } %>
+  
+        <% if(error !== null){ %>
+          <p class="text-danger"><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>
